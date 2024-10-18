@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Black background */
+    overflow: hidden;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 30%, rgba(0, 0, 0, 0.5) 70%);
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    z-index: 2; /* Make sure it appears above the overlay */
+    border: 2px solid transparent; /* For border effect */
+    animation: borderAnimation 4s infinite alternate; /* Animation for border */
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: rgba(255, 0, 0, 0.5);
+    }
+    25% {
+        border-color: rgba(255, 165, 0, 0.5);
+    }
+    50% {
+        border-color: rgba(255, 255, 0, 0.5);
+    }
+    75% {
+        border-color: rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        border-color: rgba(0, 255, 255, 0.5);
+    }
+}
+
+h1 {
+    color: white; /* Change title color to white */
+}
+
+.input-section {
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 70%; /* Adjust width for better layout */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.toggle-section {
+    margin-top: 15px;
+    color: white; /* Change toggle text color to white */
+}
+
+#weather-result {
+    margin-top: 20px;
+    color: white; /* Change weather result text color to white */
+}
+
+.weather-info {
+    text-align: left;
+}
+
+.weather-info p {
+    margin: 5px 0;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.forecast-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent forecast card */
+    padding: 10px;
+    border-radius: 5px;
+    width: 70px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.forecast-card img {
+    width: 40px;
+    height: 40px;
+}
+
+.forecast-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: white; /* Change forecast text color to white */
+}
