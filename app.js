@@ -1,4 +1,4 @@
-const apiKey = '94f548a21862512b6dac47a85ed227c7';
+const apiKey = '301098ff5b6ad09d791d3aae6381e5a0';
 let unit = 'metric'; // Default to Celsius
 
 // Function to change units
